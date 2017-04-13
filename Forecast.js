@@ -1,7 +1,7 @@
 import React, { createClass } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-let Forecast = createClass({
+var Forecast = createClass({
     render: function () {
         return (
             <View>
@@ -20,17 +20,21 @@ let Forecast = createClass({
     }
 })
 
-let styles = StyleSheet.create({
+var styles = StyleSheet.create({
     bigText: {
+        // flex: 1,
         fontSize: 20,
         textAlign: 'center',
         margin: 10,
-        color: '#FFFFFF'
+        color: '#FFFFFF',
+        backgroundColor: 'skyblue'
     },
     mainText: {
+        // flex: 1,
         fontSize: 16,
         textAlign: 'center',
-        color: '#FFFFFF'
+        color: '#FFFFFF',
+        backgroundColor: 'powderblue'
     }
 })
 

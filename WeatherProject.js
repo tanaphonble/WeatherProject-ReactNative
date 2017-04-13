@@ -12,7 +12,7 @@ import Forecast from './Forecast'
 let WeatherProject = createClass({
     getInitialState() {
         return ({
-            zip: '45130',
+            zip: 'test',
             forecast: {
                 main: 'Clouds',
                 description: 'few clouds',
@@ -21,7 +21,8 @@ let WeatherProject = createClass({
         })
     },
 
-    _hendleTextChange(event) {
+    _handleTextChange(event) {
+        console.log('cd')
         this.setState({
             zip: event.nativeEvent.text
         })
@@ -31,13 +32,8 @@ let WeatherProject = createClass({
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>
-                    Your input {this.state.zip}
+                    Your input {this.state.zip} 
                 </Text>
-                {/*<Forecast
-                    main={this.state.forecast.main}
-                    description={this.state.forecast.description}
-                    temp={this.state.forecast.temp}
-                />*/}
                 <Forecast
                     main={this.state.forecast.main}
                     description={this.state.forecast.description}
@@ -46,7 +42,7 @@ let WeatherProject = createClass({
                 <TextInput
                     style={styles.input}
                     returnKeyType='go'
-                    onSubmitEditing={this._hendleTextChange} />
+                    onSubmitEditing={this._handleTextChange} />
             </View>
         )
     }
@@ -67,10 +63,8 @@ let styles = StyleSheet.create({
     },
     input: {
         fontSize: 20,
-        borderWidth: 2,
-        height: 50,
-        width: 300,
-        textAlign: 'center'
+        height: 40,
+        borderWidth: 2
     }
 })
 
